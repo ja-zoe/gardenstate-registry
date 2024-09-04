@@ -36,9 +36,9 @@ const SearchPage = () => {
 
     async function handleFormSubmit(values: MunicipalityType) {
         const { municipality } = values
-        const response = await fetch('http://localhost:3000/api/get-municipality-data', {
+        const response = await fetch('/api/get-municipality-data', {
             method: 'POST',
-            body: JSON.stringify({municipality})
+            body: JSON.stringify(municipality)
         })
         console.log(response)
         console.log(values)
